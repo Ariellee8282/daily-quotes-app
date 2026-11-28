@@ -1,7 +1,7 @@
 // v3: network-first updates, offline fallback, and automatic removal of old app caches.
-const CACHE = 'daily-quote-v5';
+const CACHE = 'daily-quote-v6';
 const PREFIX = 'daily-quote-';
-const ASSETS = ['./index.html', './quotes.js', './manifest.webmanifest', './icon.svg'];
+const ASSETS = ['./index.html', './quotes.js', './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png', './illustration.webp'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));
 });
